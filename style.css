@@ -2,14 +2,14 @@ body{
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
     padding: 0;
-    background: radial-gradient(#79c9f9,#6992f2,#bde4f9) ;
+    background: radial-gradient(#6992f2,#bde4f9,#79c9f9) ;
 }
 
 .container{
     max-width: 400px;
     margin: 0 auto;
     padding: 6px;
-    background: radial-gradient(#373787 0px,white) ;
+    background-color: #79c9f9;
     border-radius: 5px;
     box-shadow: 0 2px 4px gray;
 }
@@ -25,18 +25,42 @@ body{
 }
 
 h1{
-    text-align: center;
-    color: #fecc00;
-    font-size: 60px;
+    background-image: url(imagenes/pokedex.jpg);
+    height: 100px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: relative;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: transparent;
 }
 
 .card{
     height: 220px;
-    width: 170px;
+    width: 150px;
     padding: 20px 20px 10px 10px;
-    background: radial-gradient(white 25px,red,black);
-    border-radius: 100%;
-    
+    background-color: #BD8F6E;
+    background-image: url(imagenes/pokeball.jpg);
+    position: relative;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+   /* align-items: center;*/
+}
+
+.card::before{
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: rgba(208, 128, 128, 0.54);
+    position: absolute;
+    opacity: 0.3;
 }
 
 .car img{
@@ -50,5 +74,6 @@ h1{
 
 .card p{
     margin-top: 5px;
-    color: white;
+    color: black;
+    font-weight: bold;
 }
